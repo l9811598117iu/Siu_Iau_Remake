@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
         Vector2 inputDir = input.normalized;
 
         Move(inputDir);
+
+        float animationSpeedPercent = (currentSpeed / runSpeed  * 1f);
+        animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
     }
     void Move(Vector2 inputDir)
     {

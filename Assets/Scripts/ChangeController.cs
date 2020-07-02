@@ -26,7 +26,8 @@ public class ChangeController : MonoBehaviour
     public Stance_Type currStance;
     void Start()
     {
-        
+        Q = true;
+        E = false;
     }
     void Update()
     {
